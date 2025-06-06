@@ -1,6 +1,6 @@
 # AWS EKS
 ## 📦 Demo 2
-This demo is part of **Module 11: Kubernetes on AWS (EKS)** in the **TWN DevOps Bootcamp**. The goal is to manually create a **Kubernetes cluster** using **Amazon Elastic Kubernetes Service (EKS)** and deploy a Fargate nodes using the AWS Console.
+This demo is part of **Module 11: Kubernetes on AWS (EKS)** in the **TWN DevOps Bootcamp**. The goal is to manually create a **Kubernetes cluster** using **Amazon Elastic Kubernetes Service (EKS)** and deploy a Fargate profile using the AWS Console.
 
 ## 🚀 Technologies Used
 - **Amazon EKS**: Amazon Elastic Kubernetes Service.
