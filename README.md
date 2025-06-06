@@ -75,14 +75,16 @@ Set up a fully managed Kubernetes environment using **Amazon EKS** and deploy a 
 
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_11_AWS_EKS_Fargate/blob/main/Img/6%20namespace%20and%20labels%20%20aws%20fargate%20profile.png" width=800/>
 
+5. Follow the prompts to complete the configuration.
+   
 ### Deploying the Nginx app
 1. Update the deployment.yaml file to include:
-     namespace:dev   
-     key pair label: profile:fargate
+     * namespace:dev   
+     * key pair label: profile:fargate
    
    These settings ensure the pod is scheduled on Fargate.
    
-   <img src"https://github.com/lala-la-flaca/DevOpsBootcamp_11_AWS_EKS_Fargate/blob/main/Img/6%20namespace%20and%20labels%20%20aws%20fargate%20profile.png" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_11_AWS_EKS_Fargate/blob/main/Img/6%20namespace%20and%20labels%20%20aws%20fargate%20profile.png" width=800 />
    
 3. Verify the current pods.
    ```bash
@@ -98,13 +100,13 @@ Set up a fully managed Kubernetes environment using **Amazon EKS** and deploy a 
 7. Create the dev namespace before applying the deployment file.
     Kubernetes requires the namespace to exist before resources can be deployed into it.
    ```bash
-   kubectl create namespace dev
+   kubectl create ns dev
    ```
    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_11_AWS_EKS_Fargate/blob/main/Img/8%20%20chcking%20current%20ns%20and%20creating%20dev%20ns%20before%20deploying%20pods.png" width=800 />
    
 9. Apply the deployment using kubectl.
     ```bash
-    kubectl apply -f deployment.yaml
+    kubectl apply -f nginx-config.yaml
     ```
 11. Check pods in the dev namespace.
     ```bash
@@ -113,6 +115,11 @@ Set up a fully managed Kubernetes environment using **Amazon EKS** and deploy a 
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_11_AWS_EKS_Fargate/blob/main/Img/9%20deploying%20nginx%20pods%20using%20dev%20ns%20and%20fargate.png" width=800 />
     
 13. Verify nodes. You should see both your managed node group and Fargate nodes. In Fargate, each pod runs on its own dedicated virtual node, whereas with EC2 node groups, multiple pods share the same node.
+    ```bash
+    kubectl get nodes
+    ```
+    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_11_AWS_EKS_Fargate/blob/main/Img/11%20current%20nodes%20fargate%20%2B%20nodegroup%20Ec2.PNG" width=800 />
+    
 
 
 
