@@ -110,7 +110,7 @@ Set up a fully managed Kubernetes environment using **Amazon EKS** and deploy a 
     ```
 11. Check pods in the dev namespace.
     ```bash
-    kubectl get pods -ns dev
+    kubectl get pods -n dev
     ```
     <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_11_AWS_EKS_Fargate/blob/main/Img/9%20deploying%20nginx%20pods%20using%20dev%20ns%20and%20fargate.png" width=800 />
     
