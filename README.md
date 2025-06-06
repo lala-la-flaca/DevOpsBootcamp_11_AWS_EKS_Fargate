@@ -84,7 +84,7 @@ Set up a fully managed Kubernetes environment using **Amazon EKS** and deploy a 
    
    These settings ensure the pod is scheduled on Fargate.
    
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_11_AWS_EKS_Fargate/blob/main/Img/6%20namespace%20and%20labels%20%20aws%20fargate%20profile.png" width=800 />
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_11_AWS_EKS_Fargate/blob/main/Img/5%20modify%20the%20depoyment%20nginx%20file%20to%20add%20labels%20for%20fargate.png" width=800 />
    
 3. Verify the current pods.
    ```bash
